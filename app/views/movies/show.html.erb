@@ -1,2 +1,13 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<div class="container">
+<h1>My movies</h1>
+<h2>Show me my list of movies</h2>
+
+<%= @movie.name %>
+<%= @movie.genre %>
+<p id="links"><%= link_to "Check your movies", movies_path %></p>
+<p id="links"><%= link_to "Update a movie", edit_movie_path(@movie) %></p>
+<p id="links"><%= link_to "Delete the movie", movie_path(@movie),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></p>
+
+</div>

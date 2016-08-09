@@ -1,12 +1,18 @@
-<h1>Movies#index</h1>
-<p>Your movie list</p>
+<div class="container">
+
+<h1>Movies</h1>
+<h2>My movie index</h2>
 
 <ul>
 <% @movies.each do |movie| %>
-  <li><%= movie.name %>   (<%= movie.genre %>)</li>
+  <li><%= link_to movie.name, movie_path(movie) %>   (<%= movie.genre %>)</li>
   <li>Have your seen it ? <%= movie.watched == true ? "[x]" : "[to see]" %></li>
-
+  <p></p>
 <% end %>
 </ul>
+
+<p>Do you want to:</p>
+<p id="links"><%= link_to "New movie", new_movie_path %></p>
+</div>
 
 
