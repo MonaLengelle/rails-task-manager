@@ -1,0 +1,12 @@
+<h1>Movies#index</h1>
+<p>Your movie list</p>
+
+<ul>
+<% @movies.each do |movie| %>
+  <li><%= movie.name %>   (<%= movie.genre %>)</li>
+  <li>Have your seen it ? <%= movie.watched == true ? "[x]" : "[to see]" %></li>
+
+<% end %>
+</ul>
+
+
